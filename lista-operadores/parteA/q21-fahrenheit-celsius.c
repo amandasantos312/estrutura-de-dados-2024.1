@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int main() {
-    float fahrenheit;
+    float fahrenheit, celsius;
 
     printf("Valor para Fahrenheit: ");
     scanf("%f", &fahrenheit);
 
-    float celsius = ((5 * fahrenheit) - 160) / 9;
+    celsius = ((5 * fahrenheit) - 160) / 9;
 
     printf("\nCorresponde a %1.fC", celsius);
 

@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int main() {
-    float kg;
+    float kg, g;
 
     printf("Valor para kg: ");
     scanf("%f", &kg);
 
-    float g = kg * 1000;
+    g = kg * 1000;
 
     printf("\nCorresponde a %.1fg", g);
 

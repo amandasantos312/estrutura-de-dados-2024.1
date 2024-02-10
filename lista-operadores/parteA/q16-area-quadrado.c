@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int main() {
-    float lado;
+    float lado, area;
 
     printf("Valor para Lado: ");
     scanf("%f", &lado);
 
-    float area = lado*lado;
+    area = lado*lado;
 
     printf("\nA area do quadrado eh igual a %.1f", area);
 

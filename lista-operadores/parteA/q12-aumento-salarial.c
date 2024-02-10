@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int main() {
-    int salario;
+    int salario, novo_salario;
 
     printf("Digite um salario: ");
     scanf("%d", &salario);
 
-    int novo_salario = salario + (salario * 0.25);
+    novo_salario = salario + (salario * 0.25);
 
     printf("Novo salario sera de: %d", novo_salario);
 

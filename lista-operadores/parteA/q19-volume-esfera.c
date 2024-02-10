@@ -3,14 +3,14 @@
 #include <stdio.h>
 
 int main() {
-    float raio;
+    float raio, volume;
 
     float pi = 3.14;
 
     printf("Valor para Raio: ");
     scanf("%f", &raio);
 
-    float volume = 4 * pi * (raio*raio*raio) / 3;
+    volume = 4 * pi * (raio*raio*raio) / 3;
 
     printf("\nO volume da esfera eh %.1f", volume);
 

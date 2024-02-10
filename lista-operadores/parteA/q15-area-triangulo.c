@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    float base, altura;
+    float base, altura, area;
 
     printf("Valor para Base: ");
     scanf("%f", &base);
@@ -10,7 +10,7 @@ int main() {
     printf("Valor para Altura: ");
     scanf("%f", &altura);
 
-    float area = (base * altura) / 2;
+    area = (base * altura) / 2;
 
     printf("\nA area do triangulo eh igual a %.1f", area);
 

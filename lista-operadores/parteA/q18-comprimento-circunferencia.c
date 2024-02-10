@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 int main() {
-    float raio;
+    float raio, comprimento;
 
     float pi = 3.14;
 
     printf("Valor para Raio: ");
     scanf("%f", &raio);
 
-    float comprimento = 2 * pi * raio;
+    comprimento = 2 * pi * raio;
 
     printf("\nComprimento da circunferencia eh igual a %.1f", comprimento);
 
