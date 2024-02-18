@@ -1,6 +1,6 @@
 *Materiais Utilizados:*
 ---
-[Livro Algorithms 4th](https://algs4.cs.princeton.edu/lectures/)
+[Slides do livro Algorithms 4th](https://algs4.cs.princeton.edu/lectures/)
 
 [Apostila Estrutura de Dados - Profs: Waldemar Celes e José Lucas Rangel PUC-RIO](http://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf?authuser=0)
 
