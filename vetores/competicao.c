@@ -1,25 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Funcionando até a parte de preencher e mostrar vetores.
-
 void preencher_inscricoes(int n, int *vetor);
 void preencher_notas(int n, float *vetor);
 void mostrar_notas(int n, float *vetor);
-float *calcular_media(int n, float *t1, int p1, float *t2, int p2, float *media);
-int *premiados(int n, int *inscr, float *t1, int p1, float *t2, int p2, int *tam);
+int *premiados(int n, int *inscr, float *t1, int p1, float *t2, int p2);
 
 int main() {
-    int n;
+    int n, *inscr, p1, p2, tam, *resultado;
+    float *t1, *t2;
+
     printf("Qtd de participantes: ");
     scanf("%d", &n);
 
-    int *inscr = (int *) malloc(n * sizeof(int));
-    float *t1 = (float *) malloc(n * sizeof(float));
-    float *t2 = (float *) malloc(n * sizeof(float));
-    float *media = (float *) malloc(n * sizeof(float));
+    inscr = (int *) malloc(n * sizeof(int));
+    t1 = (float *) malloc(n * sizeof(float));
+    t2 = (float *) malloc(n * sizeof(float));
 
-    int p1, p2;
     printf("\nPeso de P1: ");
     scanf("%d", &p1);
     printf("Peso de P2: ");
@@ -35,11 +32,11 @@ int main() {
     preencher_notas(n, t2);
     mostrar_notas(n, t2);
 
+    resultado = premiados(n, inscr, t1, p1, t2, p2);
+
     free(inscr);
     free(t1);
     free(t2);
-
-    calcular_media(n, t1, t2, p1, p2, media);
 
     return 0;
 }
@@ -67,8 +64,19 @@ void mostrar_notas(int n, float *vetor) {
     printf("\b\b]\n");
 }
 
-float *calcular_media(int n, float *t1, int p1, float *t2, int p2, float *media) {
+int *premiados(int n, int *inscr, float *t1, int p1, float *t2, int p2) { 
+    float *media, maior_nota = 0;
+    
+    media = (float *) malloc(n * sizeof(float));
+
     for (int i = 0; i < n; i++) {
-        media[i] = (t1[i] * p1 + t2[i] * p2) / 2;
+        media[i] = (p1*t1[i] + p2*t2[i]) / (p1+p2);
+
+        printf("\nA media do candidato %d foi %.1f", inscr[i], media[i]);
+
+        if (media[i] > maior_nota) {
+            maior_nota = media[i];
+        }
     }
+    printf("\n\nA maior nota foi %.1f", maior_nota);
 }
