@@ -38,8 +38,9 @@ int main() {
     printf("Raio: ");
     scanf("%d", &c2->raio);
 
-
+    printf("\n\n> C1: <");
     mostraCirculo(&c1);
+    printf("\n\n> C2: <");
     mostraCirculo(c2);
 
     atribuiAleatorio(&c1);
@@ -71,7 +72,8 @@ int main() {
 
     Circulo vet[10];
 
-    atribuiAleatorioVetor();
+    atribuiAleatorioVetor(vet, 10);
+    mostraCirculoVetor(vet, 10);
 
     free(c2);
 
